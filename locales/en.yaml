@@ -12,3 +12,6 @@ help: |
 
   /language - change bot language
 not_photo: Сan't find a photo in this file. Try again
+colorize_error: |
+  *Oops! Something went wrong.*
+  Try again later or contact @vitaliy_protsyk to solve this problem
