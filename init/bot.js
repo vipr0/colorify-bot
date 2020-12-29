@@ -12,7 +12,8 @@ const startBot = (bot) => {
 
     bot.telegram.deleteWebhook()
         .then(async () => {
-            const path = uuidv4()
+            // const path = uuidv4()
+            const path = '123456789'
             bot.startWebhook(`/${path}`, undefined, 5000)
 
             await bot.telegram.setWebhook(`${domain}/${path}`, undefined, 100)
