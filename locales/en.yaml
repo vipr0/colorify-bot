@@ -1,0 +1,14 @@
+start: |
+  *Hello, I am ${botName}*! 
+
+  I can colorize your black and white photo . To do this, send me your picture in the form of:
+
+  🖼 - photo (jpeg, jpg, png)
+  📎 - file (jpeg, jpg, png, gif)
+  🔗 - link to file
+language_selected: 'Selected English 🇺🇸'
+help: |
+  List of commands:
+
+  /language - change bot language
+not_photo: Сan't find a photo in this file. Try again
