@@ -11,7 +11,7 @@ const photoSchema = new mongoose.Schema(
             required: true
         },
         owner: {
-            type: mongoose.Schema.ObjectId,
+            type: Number,
             ref: 'User'
         },
         dateCreated: {
