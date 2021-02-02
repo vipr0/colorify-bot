@@ -13,11 +13,11 @@ const i18n = new TelegrafI18n({
 
 const setupI18N = (bot) => {
     bot.use(i18n.middleware())
-    bot.use((ctx, next) => {
+    bot.use(async (ctx, next) => {
         const { language } = ctx.dbuser
         if(language) setLocale(language, ctx)
 
-        next()
+        await next()
     })
 }
 

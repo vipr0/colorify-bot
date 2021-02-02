@@ -5,7 +5,7 @@ const checkDailyLimitation = async (ctx, next) => {
     const photosToday = await countPhotosForToday(tgId)
 
     if (premium || photosToday < 10) {
-        next()
+        await next()
     } else {
         ctx.reply('Daily limit reached. Buy premium to colorize without limits')
     }
