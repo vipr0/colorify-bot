@@ -6,6 +6,9 @@ deepai.setApiKey(process.env.DEEPAI_TOKEN);
 
 const colorizePhoto = async (image, ctx) => {
     try {
+        // Send 'sending photo...' status
+        await ctx.replyWithChatAction('upload_photo')
+
         const { output_url } = await deepai.callStandardApi("colorizer", { image });
 
         await addPhotoToDB(image, output_url, ctx.dbuser.tgId)
