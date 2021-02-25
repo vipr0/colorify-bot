@@ -1,10 +1,20 @@
 const { Extra } = require('telegraf');
 const deepai = require('deepai');
+const { addPhotoToDB } = require('../../db/utils/photo');
 
 deepai.setApiKey(process.env.DEEPAI_TOKEN);
 
 const isImageMimetype = (mimetype) => {
     return /^image/.test(mimetype)
+}
+
+const applyColorizer = async(image) => {
+    const { output_url } = await deepai.callStandardApi("colorizer", { image });
+    return output_url;
+}
+
+const applySuperResolution = async(image) => {
+    return await deepai.callStandardApi("waifu2x", { image });
 }
 
 const colorizePhoto = async (image, ctx) => {
@@ -30,13 +40,5 @@ const colorizePhoto = async (image, ctx) => {
     }
 }
 
-const applyColorizer = async(image) => {
-    const { output_url } = await deepai.callStandardApi("colorizer", { image });
-    return output_url;
-}
-
-const applySuperResolution = async(image) => {
-    return await deepai.callStandardApi("waifu2x", { image });
-}
 
 module.exports = { isImageMimetype, colorizePhoto }
