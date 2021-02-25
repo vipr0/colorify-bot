@@ -1,6 +1,5 @@
 const { Markup } = require('telegraf')
-
-const { setLanguage } = require('../helpers/db')
+const { setUserLanguage } = require('../../db/utils/user')
 
 const showLanguageKeyboard = (ctx) => {
     return ctx.reply(
@@ -14,7 +13,7 @@ const showLanguageKeyboard = (ctx) => {
 }
 
 const selectLanguage = async (lng, ctx) => {
-    await setLanguage(ctx.dbuser.tgId, lng)
+    await setUserLanguage(ctx.dbuser.tgId, lng)
 
     setLocale(lng, ctx)
 

@@ -1,5 +1,5 @@
 const TelegrafI18n = require('telegraf-i18n')
-const { setLocale } = require('../helpers/language')
+const { setLocale } = require('../utils/language')
 
 const i18n = new TelegrafI18n({
     directory: `${__dirname}/../locales`,

@@ -2,25 +2,23 @@ const { Telegraf } = require('telegraf')
 const { v4: uuidv4 } = require('uuid')
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
+bot.webhookPath = uuidv4();
 
 bot.catch((err, ctx) => {
     console.log(`Ooops, encountered an error for ${ctx.updateType}`, err)
 })
 
 const startBot = (bot) => {
-    const domain = process.env.WEBHOOK_URL
+    const domain = process.env.WEBHOOK_DOMAIN
 
     bot.telegram.deleteWebhook()
         .then(async () => {
-            const path = uuidv4()
-            bot.startWebhook(`/${path}`, undefined, 5000)
+            await bot.telegram.setWebhook(`${domain}/${bot.webhookPath}`)
 
-            await bot.telegram.setWebhook(`${domain}/${path}`, undefined, 100)
-            await bot.launch()
+            console.log('New webhook was set successfully')
         })
         .catch(console.error)
 }
-
 
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'))

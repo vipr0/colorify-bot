@@ -1,6 +1,5 @@
 const isImageUrl = require('is-image-url');
-const colorizePhoto = require('../helpers/colorize')
-const isImageMimetype = require('../helpers/isImageMimetype')
+const { isImageMimetype, colorizePhoto } = require('../utils/photo')
 const checkDailyLimitation = require('../middlewares/checkDailyLimitation')
 
 const setupColorize = (bot) => {

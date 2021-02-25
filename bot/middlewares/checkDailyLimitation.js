@@ -1,4 +1,4 @@
-const { countPhotosForToday } = require("../helpers/db");
+const { countPhotosForToday } = require("../../db/utils/photo");
 
 const checkDailyLimitation = async (ctx, next) => {
     const { tgId, premium } = ctx.dbuser;

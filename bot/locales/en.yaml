@@ -15,3 +15,14 @@ not_photo: Сan't find a photo in this file. Try again
 colorize_error: |
   *Oops! Something went wrong.*
   Try again later or contact @vitaliy_protsyk to solve this problem
+account_status: |
+  *Premium subscription*
+  
+  Account status: ${accountType}
+premium: Premium
+normal: Normal
+buy_subscription: Buy subscription
+cancel_subscription: Cancel subscription
+already_premium: You have already bought premium subscription
+not_a_premium: You don`t have premium subscription
+click_to_buy: Click the button below to go to the payment page

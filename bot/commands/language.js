@@ -1,4 +1,4 @@
-const { showLanguageKeyboard, selectLanguage } = require('../helpers/language')
+const { showLanguageKeyboard, selectLanguage } = require('../utils/language')
 
 const setupLanguage = (bot) => {
     bot.command('language', (ctx) => showLanguageKeyboard(ctx))

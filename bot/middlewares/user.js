@@ -1,4 +1,4 @@
-const { getUser } = require('../helpers/db')
+const { getUser } = require('../../db/utils/user')
 
 const setupUser = (bot) => {
     bot.use(async (ctx, next) => {
