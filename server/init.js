@@ -4,6 +4,7 @@ const errorController = require('./controllers/errorController')
 const paymentController = require('./controllers/paymentController')
 const userController = require('./controllers/userController')
 const jsonParser = require('./utils/jsonParser')
+const port = process.env.PORT || 3000;
 
 const startServer = (bot) => {
     const app = express()
@@ -29,7 +30,7 @@ const startServer = (bot) => {
 
     app.use(errorController);
 
-    app.listen(80, () => { console.log('Listening on port 80!')})
+    app.listen(port, () => { console.log('Listening on port' + port)})
 }
 
 module.exports = {
