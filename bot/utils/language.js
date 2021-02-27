@@ -18,7 +18,7 @@ const selectLanguage = async (lng, ctx) => {
     setLocale(lng, ctx)
 
     await ctx.reply(ctx.i18n.t('language_selected'))
-    await ctx.replyWithMarkdown(ctx.i18n.t('start', { botName: ctx.botInfo.first_name }))
+    await ctx.replyWithMarkdown(ctx.i18n.t('start', { botName: "Colorify Bot" }))
 }
 
 const setLocale = (lng, ctx) => {
