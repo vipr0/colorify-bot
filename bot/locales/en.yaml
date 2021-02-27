@@ -1,27 +1,45 @@
 start: |
-  *Hello, I am ${botName}*! 
+  👋 👋 *Hello, I am ${botName}*!
 
-  I can colorize your black and white photo . To do this, send me your picture in the form of:
+  I can colorize your black and white photo. 🎨🎨🎨
+  To do this, send me your picture in the form of:
 
   🖼 - photo (jpeg, jpg, png)
   📎 - file (jpeg, jpg, png, gif)
   🔗 - link to file
-language_selected: 'Selected English 🇺🇸'
+language_selected: Selected English 🇺🇸
 help: |
-  List of commands:
+  📋 *List of commands* 📋
 
-  /language - change bot language
-not_photo: Сan't find a photo in this file. Try again
+  /language - change bot language 🗣
+  /premium - get status of your account 💎💎💎
+
+  📨 Questions: [@vitaliy_protsyk](@vitaliy_protsyk)
+not_photo: | 
+  🤔 *Hmm...* 🤔
+
+  Looks like it's not a photo. 🚫
+  Check your file and try again.
 colorize_error: |
-  *Oops! Something went wrong.*
-  Try again later or contact @vitaliy_protsyk to solve this problem
-account_status: |
-  *Premium subscription*
+  😬 *Oops!* 😬
   
-  Account status: ${accountType}
-premium: Premium
-normal: Normal
-buy_subscription: Buy subscription
+  Something went wrong. 🤷‍♀️
+  Try again later or contact [@vitaliy_protsyk](@vitaliy_protsyk) to solve this problem
+account_status: |
+  💎 *Premium* 💎
+  
+  ${accountType}
+premium: |
+  Account status: *Premium*
+
+  Thanks for buying premium 😊
+normal: | 
+  Account status: *Normal*
+
+  If you wanna buy premium click on a button below. ⬇️
+  Premium costs $1.99 and is paid once.
+buy_button: Buy premium 💵
+buy_subscription: 💵 Buy ($1.99) 💵
 cancel_subscription: Cancel subscription
 already_premium: You have already bought premium subscription
 not_a_premium: You don`t have premium subscription
