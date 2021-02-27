@@ -8,11 +8,11 @@ const setupPremium = (bot) => {
 
         ctx.replyWithMarkdown(
             ctx.i18n.t('account_status', { accountType }),
-            !ctx.dbuser.premium && Extra.markup(Markup.inlineKeyboard([Markup.callbackButton(ctx.i18n.t('buy_subscription'), 'buy_subscription')]))
+            !ctx.dbuser.premium && Extra.markup(Markup.inlineKeyboard([Markup.callbackButton(ctx.i18n.t('buy_button'), 'buy_button')]))
         )
     })
 
-    bot.action('buy_subscription', async (ctx) => {
+    bot.action('buy_button', async (ctx) => {
         if(ctx.dbuser.premium) return ctx.reply(ctx.i18n.t('already_premium'));
 
         const params = generatePaymentParams(ctx.from.id)
