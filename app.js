@@ -20,8 +20,8 @@ setupI18N(bot)
 setupStart(bot)
 
 // COMMANDS
-setupLanguage(bot)
 setupHelp(bot)
+setupLanguage(bot)
 setupColorize(bot)
 setupPremium(bot)
 
