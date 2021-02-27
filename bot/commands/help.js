@@ -1,6 +1,6 @@
 const setupHelp = (bot) => {
-    bot.help((ctx) => {
-        ctx.replyWithMarkdown(ctx.i18n.t('help'))
+    bot.help(async (ctx) => {
+        await ctx.replyWithMarkdown(ctx.i18n.t('help')) 
     })
 }
 
